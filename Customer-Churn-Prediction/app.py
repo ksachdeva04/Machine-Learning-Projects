@@ -1,19 +1,19 @@
-
 import streamlit as st
 import pickle
 import pandas as pd
+from pathlib import Path
 
-
-# ============================================================
-# 1. LOAD MODEL AND SCALER
-# ============================================================
+BASE_DIR = Path(__file__).resolve().parent
 
 @st.cache_resource
 def load_artifacts():
-    with open("model.pkl", "rb") as file:
+    model_path = BASE_DIR / "model.pkl"
+    scaler_path = BASE_DIR / "scaler.pkl"
+
+    with open(model_path, "rb") as file:
         model = pickle.load(file)
 
-    with open("scaler.pkl", "rb") as file:
+    with open(scaler_path, "rb") as file:
         scaler = pickle.load(file)
 
     return model, scaler
