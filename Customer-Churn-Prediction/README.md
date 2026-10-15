@@ -1,3 +1,9 @@
+## Live Demo
+
+Try the Customer Churn Prediction app here:
+
+[Launch the app](https://machine-learning-projects-33wpxrjxfmbhsvej6jaqth.streamlit.app/)
+
 # Customer Churn Prediction
 
 ## Project Overview
